@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<h1> JSON assignment </h1>
+<p>This is a file with a script element</p>
+
+
+<script>
+//object to string
+const o1 ={x: 3, y: -4};
+const s1 = JSON.stringify(o1);
+console.log(s1);
+
+//string to object
+const s2 = '{ "c":57, "d":80 }';
+const o2 = JSON.parse(s2);
+console.log(o2);
+console.log(o2.c);
+
+
+</script>
