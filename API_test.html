@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title> API test </title>
+</head>
+
+<body>
+
+<div id="sunset"></div>
+
+<script>
+fetch("https://api.sunrise-sunset.org/json?lat=34.1083&lng=-117.2898&formatted=0")
+.then(response => response.json())
+.then(data => {
+	const d = new Date(data.results.sunset);
+	document.getElementById("sunset").innerHTML =
+	"Sunset in San Bernardino: " +
+	(d.getHours() - 12) + ':' + d.getMinutes() + 'PM';
+});
+
+</script>
+
+</body>
+</html>
